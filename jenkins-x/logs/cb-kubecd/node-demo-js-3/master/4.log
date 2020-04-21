@@ -1,0 +1,132 @@
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-x54s5[0m
+{"level":"warn","ts":1587477573.7933106,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587477573.7940257,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-7fkfp[0m
+{"level":"warn","ts":1587477575.1374028,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587477575.1383004,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-node-demo-js-3-master-z9sg9-js8r2[0m
+{"level":"warn","ts":1587477582.192688,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587477583.2877188,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/node-demo-js-3.git @ v1.0.3 in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c1ddf1847fdf1126705228c25346ce02516e94a5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.3 No repository field.
+npm WARN REPLACE_ME@1.0.3 No license field.
+
+up to date in 10.117s
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.3 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+ERROR: logging before flag.Parse: E0421 14:00:03.581397      11 metadata.go:241] Failed to unmarshal scopes: invalid character 'h' looking for beginning of value
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0421 14:00:03.918138      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0421 14:00:03.920388      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/04/21 14:00:03 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2020/04/21 14:00:05 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Downloading base image node:9-slim           
+2020/04/21 14:00:06 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0003] Downloading base image node:9-slim           
+2020/04/21 14:00:06 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] ENV PORT 8080                                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] EXPOSE 8080                                  
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] WORKDIR /usr/src/app                         
+[36mINFO[0m[0004] cmd: workdir                                 
+[36mINFO[0m[0004] Changed working directory to /usr/src/app    
+[36mINFO[0m[0004] Creating directory /usr/src/app              
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] COPY . .                                     
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] CMD ["npm", "start"]                         
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2020/04/21 14:00:07 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/04/21 14:00:07 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/04/21 14:00:07 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/04/21 14:00:07 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/04/21 14:00:07 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/04/21 14:00:10 pushed blob: sha256:275de11930cdfff026a136476a6ba35665f6b80f14323a6ad758c10005181831
+2020/04/21 14:00:10 pushed blob: sha256:4272440870d8ce5d642f638f60f44e3abccac4512f5a73703f2da92accfb4e7e
+2020/04/21 14:00:11 pushed blob: sha256:3a5fbe1cd4d6ea2c6ba09d8a4e22a1c580d52c7e230b18e92a7ea57b02bd88d0
+2020/04/21 14:00:12 gcr.io/jstrachan-multicluster/node-demo-js-3:1.0.3: digest: sha256:f299a825dd04e9c7f87561db7e26b099683f4792fef4e32471efa4e293dc34c2 size: 1404
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/node-demo-js-3 to an unshallow repository
+Generating change log from git ref 8523043ecdfc809ac64ad4f04ec5ac62160d1857 => 4ab29a3f0664c879b69b4d5920d0365a775b85f1
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 31caaa0159f3688c7b3fd6e044a7c9ac721a85f5 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 31caaa0159f3688c7b3fd6e044a7c9ac721a85f5 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: Failed to enrich commit c1ddf1847fdf1126705228c25346ce02516e94a5 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit c1ddf1847fdf1126705228c25346ce02516e94a5 with issues: users.jenkins.io "x-0" already exists
+WARNING: No release found for cb-kubecd/node-demo-js-3 and tag v1.0.3 so creating a new release
+Updated the release information at https://github.com/cb-kubecd/node-demo-js-3/releases/tag/v1.0.3
+generated: /workspace/source/charts/node-demo-js-3/templates/release.yaml
+Created Release node-demo-js-3-1-0-3 resource in namespace **
+Updating PipelineActivity cb-kubecd-node-demo-js-3-master-4 with version 1.0.3
+Updated PipelineActivities cb-kubecd-node-demo-js-3-master-4 with release notes URL: https://github.com/cb-kubecd/node-demo-js-3/releases/tag/v1.0.3
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file node-demo-js-3-1.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mcb-kubecd-node-demo-js-3-master-z9sg9-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app node-demo-js-3 version 1.0.3 to namespace **-staging
+WARNING: could not find upstream git URL failed to unmarshal  due to no GitConfDir defined
+pushed merged branch promote-node-demo-js-3-1.0.3
+Created Pull Request: https://github.com/cb-kubecd/environment-bootv3-demo-staging/pull/3
+Added label updatebot to Pull Request https://github.com/cb-kubecd/environment-bootv3-demo-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-demo-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-demo-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-demo-staging/pull/3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-demo-staging/pull/3
+Pull Request https://github.com/cb-kubecd/environment-bootv3-demo-staging/pull/3 is merged at sha 5c92b6dc421f6c5545a5093f5b1e8e47af0e33bf
+Pull Request merged but we are not waiting for the update pipeline to complete!
