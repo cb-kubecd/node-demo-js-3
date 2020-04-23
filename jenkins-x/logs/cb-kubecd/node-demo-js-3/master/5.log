@@ -1,0 +1,29 @@
+
+Showing logs for build [32mmeta-cb-kubecd-node-demo-js-3-m-s9gvg-5[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-frrpb[0m
+{"level":"warn","ts":1587651203.5245087,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587651203.5251627,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-cb-kubecd-node-demo-js-3-m-s9gvg-5[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-sqzkq[0m
+{"level":"warn","ts":1587651204.527483,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587651204.5287688,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-cb-kubecd-node-demo-js-3-m-s9gvg-5[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-cb-kubecd-node-demo-js-3-m-s9gvg-5[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-cb-kubecd-node-demo-js-3-m-s9gvg-q7gfj[0m
+{"level":"warn","ts":1587651209.600662,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587651211.3766413,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/node-demo-js-3.git @ master in path /workspace/source"}
+
+Showing logs for build [32mmeta-cb-kubecd-node-demo-js-3-m-s9gvg-5[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+WARNING: failed to discover alpha commands from github: failed to get YAML from https://raw.githubusercontent.com/jenkins-x-labs/**l/master/alpha/plugins.yml: Get https://raw.githubusercontent.com/jenkins-x-labs/**l/master/alpha/plugins.yml: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-cb-kubecd-node-demo-js-3-m-s9gvg-5[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-cb-kubecd-node-demo-js-3-m-s9gvg-5[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+WARNING: failed to discover alpha commands from github: failed to get YAML from https://raw.githubusercontent.com/jenkins-x-labs/**l/master/alpha/plugins.yml: Get https://raw.githubusercontent.com/jenkins-x-labs/**l/master/alpha/plugins.yml: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+error: : failed to git fetch origin v0.0.12 for repo: https://github.com/jenkins-x/**r-versions.git in dir /builder/home/.**/jenkins-x-versions: failed to run 'git fetch origin v0.0.12' command in directory '/builder/home/.**/jenkins-x-versions', output: 'error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: the remote end hung up unexpectedly'
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
